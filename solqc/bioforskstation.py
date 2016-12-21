@@ -13,7 +13,7 @@ stations at this time is found in ../config/stations.cfg.
 
 import pandas as pd
 import numpy as np
-import ConfigParser
+import configparser
 from datetime import datetime
 import os
 
@@ -31,7 +31,7 @@ class BioforskStation(object):
 
     """
 
-    conf = ConfigParser.RawConfigParser()
+    conf = configparser.RawConfigParser()
 
     def __init__(self, name_of_station, remove_partial_years=True, path='..'):
         """Sets up an instance"""

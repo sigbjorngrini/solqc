@@ -1,5 +1,5 @@
 # Import class 
-from solqc.bioforskstation import BioforskStation
+from bioforskstation import BioforskStation
 
 # Create Bioforsk station
 station = BioforskStation('Aas')
@@ -22,4 +22,4 @@ visual_control_dates = [['1995-05-25', '1995-05-25']]
 avg_year = station.get_average_year(visual_control_dates)
 
 # Get monthly averages
-avg_year.resample('D', how='sum').resample('M')
+avg_year.resample('D', how='sum').resample('M').mean().to_csv('average_monthly_Aas')
